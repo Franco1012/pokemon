@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { NavBar } from "./components/Nabvar";
+import { NavBar } from "./components/NavBar";
 import { PokemonProvider } from "./PokemonContext";
 import PokemonHome from "./components/PokemonHome";
 import { Nosotros } from "./components/Nosotros";
@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex flex-col items-center justify-center min-h-screen  bg-blue-700">
         <PokemonProvider>
           <Routes>
             <Route path="/" element={<PokemonHome />} />
@@ -26,6 +26,3 @@ function App() {
 }
 
 export default App;
-
-
-
