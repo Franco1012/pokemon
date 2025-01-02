@@ -5,12 +5,13 @@ import { PokemonProvider } from "./PokemonContext";
 import PokemonHome from "./components/PokemonHome";
 import { Nosotros } from "./components/Nosotros";
 import PokemonDetail from "./components/PokemonDetail";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <NavBar />
-      <div className="flex flex-col items-center justify-center min-h-screen  bg-blue-700">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-blue-700">
         <PokemonProvider>
           <Routes>
             <Route path="/" element={<PokemonHome />} />
@@ -21,6 +22,8 @@ function App() {
           </Routes>
         </PokemonProvider>
       </div>
+
+      <Footer />
     </Router>
   );
 }
